@@ -53,18 +53,39 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 // default value for title local
 // app.locals.title = 'Express - Generated with IronGenerator';
 
+const session    = require("express-session");
+const MongoStore = require("connect-mongo")(session);
 
+app.use(session({
+    secret: "basic-auth-secret",
+    cookie: { maxAge: 60000 },
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 24 * 60 * 60 
+    })
+  }));
 
-const index = require('./routes/index');
-app.use('/', index);
+function protect(req,res,next){
+  if(req.session.currentUser) next();
+  else res.redirect("/login");
+}
+
+app.use('/', require('./routes/index'));
 app.use('/signup', require('./routes/signup'));
 app.use('/login', require('./routes/login'));
+
+app.use('/fridge', protect);
 app.use('/fridge', require('./routes/fridge'));
+
+app.use('/newrecipe', protect);
 app.use('/newrecipe', require('./routes/recipe/newrecipe'));
+
 app.use('/recipes', require('./routes/recipe/recipes')); //list
 app.use('/recipes', require('./routes/recipe/detailrecipe')); //detail
 app.use('/recipes', require('./routes/recipe/deleterecipe')); //delete
 app.use('/shoppinglist', require('./routes/shoppinglist'))
 
+app.use('/shoppinglist', protect);
+app.use('/shoppinglist', require('./routes/shoppinglist'));
 
 module.exports = app;
