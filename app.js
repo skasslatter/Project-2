@@ -10,7 +10,6 @@ const logger       = require('morgan');
 const path         = require('path');
 
 const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
 
 const mongoUsername = process.env.MONGOUSERNAME
 const mongoPassword = process.env.MONGOPASSWORD

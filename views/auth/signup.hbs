@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+
+    <form action="/auth/signup" method="post">
+      <h2>Sign up now</h2>
+
+      <div class="form-group">
+        <label for="username">Your name</label>
+        <input type="text" name="username" placeholder="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="password" required>
+      </div>
+
+      {{!-- {{#if errorMessage }}
+      <div class="error-message">{{ errorMessage }}</div>
+      {{/if}} --}}
+
+      <button class="btn btn-info">Sign up</button>
+
+      <p class="account-message">
+        Already have an account? <a href="/login">Log in</a>
+      </p>
+    </form>
+
+  </div>
+
+</div>
