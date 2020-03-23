@@ -9,10 +9,10 @@ const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
 
-// const User = require('../models/User.js')
+const User = require('../models/User.js')
+const RECIPE = require('../models/Recipe.js')
 
 const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
 
 const mongoUsername = process.env.MONGOUSERNAME
 const mongoPassword = process.env.MONGOPASSWORD
