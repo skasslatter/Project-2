@@ -80,8 +80,10 @@ app.use('/fridge', require('./routes/fridge'));
 app.use('/newrecipe', protect);
 app.use('/newrecipe', require('./routes/recipe/newrecipe'));
 
-app.use('/recipes', require('./routes/recipe/recipes'));
-app.use('/detail', require('./routes/recipe/detailrecipe'));
+app.use('/recipes', require('./routes/recipe/recipes')); //list
+app.use('/recipes', require('./routes/recipe/detailrecipe')); //detail
+app.use('/recipes', require('./routes/recipe/deleterecipe')); //delete
+app.use('/shoppinglist', require('./routes/shoppinglist'))
 
 app.use('/shoppinglist', protect);
 app.use('/shoppinglist', require('./routes/shoppinglist'));
