@@ -2,12 +2,11 @@ const express = require("express");
 const app = express();
 const Recipe = require("../../models/Recipe.js");
 
-app.get("/:id", (req, res) => {
+app.get("/:id/delete", (req, res) => {
   Recipe
-  .findById(req.params.id)
-    .then(recipe => {
-      console.log("the response is", recipe);
-      res.render("recipes/detail", {recipe: recipe});
+  .findByIdAndDelete(req.params.id)
+    .then(() => {
+      res.redirect("/recipes");
     })
     .catch(err => {
       console.log("this is an error", err);
