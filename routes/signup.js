@@ -15,9 +15,13 @@ app.post("/", (req, res) => {
     if (user !== null) {
       res.render("auth/signup.hbs", {
         errorMessage: "The username already exists!"
-      });
-      
-    } else {
+      });   
+    } 
+    else {
+      if (checkPassword(password) !== true){
+        //insert some errormessage here that will be shown 
+        return
+      } 
       bcrypt.hash(password, 10, function(err, hash) {
         if (err) next("hashing error");
         else {
@@ -40,5 +44,12 @@ app.post("/", (req, res) => {
     res.send("user not created", err);
   });
 });
+
+function checkPassword(str){
+  // at least one number, one lowercase and one uppercase letter
+  // at least 8 characters
+  var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+  return re.test(str);
+}   
 
 module.exports = app;
