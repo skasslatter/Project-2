@@ -59,6 +59,11 @@ const index = require('./routes/index');
 app.use('/', index);
 app.use('/signup', require('./routes/signup'));
 app.use('/login', require('./routes/login'));
+app.use('/fridge', require('./routes/fridge'));
+app.use('/newrecipe', require('./routes/newrecipe'));
+app.use('/recipes', require('./routes/recipes'));
+app.use('/detail', require('./routes/detailrecipe'));
+app.use('/shoppinglist', require('./routes/shoppinglist'))
 
 
 module.exports = app;
