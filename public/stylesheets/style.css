@@ -5,4 +5,17 @@ body {
 a {
   color: #00B7FF; }
 
+.invalid {
+  padding-left: 22px;
+  line-height: 24px;
+  color: #ec3f41; }
+
+.valid {
+  padding-left: 22px;
+  line-height: 24px;
+  color: #3a7d34; }
+
+#pswd_info {
+  display: none; }
+
 /*# sourceMappingURL=style.css.map */
