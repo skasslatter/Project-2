@@ -1,5 +1,6 @@
 require('dotenv').config();
- 
+
+const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const express      = require('express');
 const favicon      = require('serve-favicon');
@@ -17,7 +18,7 @@ const mongoUsername = process.env.MONGOUSERNAME
 const mongoPassword = process.env.MONGOPASSWORD
 
 mongoose
-  .connect(`mongodb+srv://${mongoUsername}:${mongoPassword}@cluster0-pfy4a.mongodb.net/test`, {useNewUrlParser: true})
+  .connect(`mongodb+srv://${mongoUsername}:${mongoPassword}@cluster0-pfy4a.mongodb.net/Project2`, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
