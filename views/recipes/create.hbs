@@ -1,0 +1,57 @@
+<div id="form" class="container">
+
+  <h1>Create a new recipe</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <form action="/recipes/create" method="POST" enctype="multipart/form-data">
+
+        <div class="form-group">
+          <label>Title</label>
+          <input type="text" name="title" class="form-control" placeholder="Title" required="required">
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="exampleFormControlSelect1">Dish type</label>
+          <select name="dishType" class="form-control" placeholder="Select" required="required">
+            <option>Hors d'oeuvre</option>
+            <option>Starter</option>
+            <option>Main</option>
+            <option>Side</option>
+            <option>Dessert</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label>Duration</label>
+          <div class="input-group">
+            <input type="number" name="duration" class="form-control" placeholder="Duration" required="required">
+            <div class="input-group-append">
+              <div class="input-group-text">min</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Ingredients</label>
+          <ul>
+            <li><input type="text" name="ingredients[]" placeholder="ingredients1" /></li>
+            <li><input type="text" name="ingredients[]" placeholder="ingredients2" /></li>
+            <li><input type="text" name="ingredients[]" placeholder="ingredients3" /></li>
+            <li><input type="text" name="ingredients[]" placeholder="ingredients4" /></li>
+            <li><input type="text" name="ingredients[]" placeholder="ingredients5" /></li>
+          </ul>
+          <button id="ingredient" class="btn btn-warning btn-lg btn-block">+</button>
+        </div>
+
+        <div class="form-group">
+          <label for="photo">Upload a picture</label>
+          <input type="file" name="photo">
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg btn-block">Create Recipe</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{{!-- change form action --}}

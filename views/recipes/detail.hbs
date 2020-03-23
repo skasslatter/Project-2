@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="card mb-3">
+      <img src="{{recipe.image}}" class="card-img-top" alt="Recipe">
+      <div class="card-body">
+        <h5 class="card-title">{{recipe.title}}</h5>
+        <ul>
+          <li>duration: {{recipe.duration}}</li>
+          <li>dish type: {{recipe.dishType}}</li>
+        </ul>
+      </div>
+      <div class="card-body">
+      <div class="row justify-content-around">
+        <a href="/recipes/{{recipe.id}}/update" class="btn btn-warning col-md-5 ">Update recipe</a>
+        <a href="/recipes/{{recipe.id}}/delete" class="btn btn-danger col-md-5">Delete recipe</a>
+        {{!-- change href --}}
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+{{!-- change href and variable name (now recipe) --}}
