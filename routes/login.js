@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
+const session    = require("express-session");
+const MongoStore = require("connect-mongo")(session);
 
 app.get("/", (req,res)=> {
   res.render("auth/login");

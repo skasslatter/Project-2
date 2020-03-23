@@ -8,18 +8,21 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  const { username, password } = req.body;
+  const { name, username, password } = req.body;
   User
-  .findOne({ username: username }).then(user => {
+  .findOne({ "username": username })
+  .then(user => {
     if (user !== null) {
       res.render("auth/signup.hbs", {
         errorMessage: "The username already exists!"
       });
+      
     } else {
       bcrypt.hash(password, 10, function(err, hash) {
         if (err) next("hashing error");
         else {
           User.create({
+            name: name,
             username: username,
             password: hash
           })
@@ -32,6 +35,9 @@ app.post("/", (req, res) => {
         }
       });
     }
+  })
+  .catch(err => {
+    res.send("user not created", err);
   });
 });
 
