@@ -60,9 +60,9 @@ app.use('/', index);
 app.use('/signup', require('./routes/signup'));
 app.use('/login', require('./routes/login'));
 app.use('/fridge', require('./routes/fridge'));
-app.use('/newrecipe', require('./routes/newrecipe'));
-app.use('/recipes', require('./routes/recipes'));
-app.use('/detail', require('./routes/detailrecipe'));
+app.use('/newrecipe', require('./routes/recipe/newrecipe'));
+app.use('/recipes', require('./routes/recipe/recipes'));
+app.use('/detail', require('./routes/recipe/detailrecipe'));
 app.use('/shoppinglist', require('./routes/shoppinglist'))
 
 
