@@ -5,7 +5,9 @@ const Schema = mongoose.Schema;
 const recipeSchema = new Schema({
     title: String,
     ingredients: Array,
-    dishType: String,
+    dishType: {
+      type: String, 
+      enum: ["Breakfast", "Dish", "Snack", "Drink", "Dessert", "Other"]},
     duration: {
       type: Number,
       min: 0
@@ -24,3 +26,4 @@ const recipeSchema = new Schema({
 
 const Recipe = mongoose.model("recipes", recipeSchema);
 module.exports = Recipe;
+
