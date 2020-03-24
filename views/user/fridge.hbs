@@ -9,7 +9,10 @@
 <div>
   <h3>Ingredients I have at home:</h3>
   <ul id="ingredient-list">
-
+  {{#each ingredients}}
+          <li>{{name}}</li>
+          <button id="btn-delete" class="btn btn-danger">Remove</button>
+  {{/each}}
   </ul>
 </div>
 
