@@ -1,0 +1,16 @@
+{{!-- <div class="hero-image">
+  <div class="hero-text">
+   <h2>Shopping list</h2>
+  </div>
+</div>  --}}
+
+<h2>Shopping list</h2>
+<ul id="shoppinglist">
+  {{#each recipe.ingredients}}
+  <li>{{this}}</li>
+  {{/each}}
+</ul>
+
+<a id="download_link" download="shoppinglist.txt" href="" >Download shopping list!</a>
+
+
