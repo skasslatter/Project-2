@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const User = require("./User.js");
+// const User = require("./User.js");
 
 const recipeSchema = new Schema({
     title: String,
