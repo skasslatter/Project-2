@@ -8,6 +8,10 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
+const app = express();
+
+hbs.registerPartials(__dirname + "/views/partials");
+app.use(express.static("public")) 
 
 const MongoClient = require('mongodb').MongoClient;
 
@@ -26,7 +30,6 @@ mongoose
 const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
 
-const app = express();
 
 // Middleware Setup
 app.use(logger('dev'));
@@ -73,6 +76,8 @@ function protect(req,res,next){
 app.use('/', require('./routes/index'));
 app.use('/signup', require('./routes/signup'));
 app.use('/login', require('./routes/login'));
+app.use('/logout', require('./routes/login'));
+
 
 app.use('/fridge', protect);
 app.use('/fridge', require('./routes/fridge'));

@@ -9,7 +9,7 @@ const multer = require("multer");
 const uploadCloud = require("../../config/cloudinary.js");
 
 app.get("/", (req, res) => {
-  res.render("recipes/create");
+  res.render("recipes/create", {currentUser: req.session.currentUser});
 });
 
 app.post("/", uploadCloud.single('photo'), (req, res) => {

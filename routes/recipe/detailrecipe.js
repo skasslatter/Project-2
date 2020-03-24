@@ -7,7 +7,7 @@ app.get("/:id", (req, res) => {
   .findById(req.params.id)
     .then(recipe => {
       console.log("the response is", recipe);
-      res.render("recipes/detail", {recipe: recipe});
+      res.render("recipes/detail", {recipe: recipe, currentUser: req.session.currentUser});
     })
     .catch(err => {
       console.log("this is an error", err);

@@ -31,6 +31,7 @@ app.post("/", (req, res) => {
             password: hash
           })
             .then(user => {
+              req.session.currentUser = user;
               res.redirect("/login");
             })
             .catch(err => {
