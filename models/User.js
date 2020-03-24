@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const Ingredient = require("./Ingredient.js");
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -12,7 +13,13 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: [true, 'Username is required']
-  }
+  },
+  fridgeIngredients: [
+    {
+      type : mongoose.Schema.ObjectId,
+      ref : 'ingredients'
+    }
+  ]
 })
 
 const User = mongoose.model("users", userSchema); 
