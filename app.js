@@ -87,6 +87,7 @@ app.use('/newrecipe', require('./routes/recipe/newrecipe'));
 
 app.use('/recipes', require('./routes/recipe/recipes')); //list
 app.use('/recipes', require('./routes/recipe/detailrecipe')); //detail
+app.use('/recipes', require('./routes/recipe/updaterecipe')); //update
 app.use('/recipes', require('./routes/recipe/deleterecipe')); //delete
 
 app.use('/shoppinglist', protect);
