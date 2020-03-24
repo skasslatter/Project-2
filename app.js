@@ -61,10 +61,10 @@ const MongoStore = require("connect-mongo")(session);
 
 app.use(session({
     secret: "basic-auth-secret",
-    cookie: { maxAge: 60000 },
+    cookie: { maxAge: 60000 * 60 *24},
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
-      ttl: 24 * 60 * 60 
+      ttl: 24 * 60 * 60 * 1000
     })
   }));
 
