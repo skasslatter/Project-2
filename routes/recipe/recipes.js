@@ -17,7 +17,6 @@ app.get("/", (req, res) => {
 app.get('/results', (req, res) => {
   User
     .findById(req.session.currentUser._id)
-    //.populate("fridgeIngredients")
     .then((user) => {
       ingredients = user.fridgeIngredients
       console.log(ingredients)
