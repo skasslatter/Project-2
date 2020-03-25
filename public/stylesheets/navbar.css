@@ -1,0 +1,8 @@
+.navbar {
+  background-color: rgb(7, 49, 79)!important;
+  padding: 20px;
+}
+
+.navbar a{
+  color: white!important;
+}
