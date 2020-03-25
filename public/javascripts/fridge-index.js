@@ -1,6 +1,7 @@
 const $list = document.getElementById("ingredient-list");
-const $addButton = document.getElementById("fridge-button");
 
+// ADD INGREDIENT
+const $addButton = document.getElementById("fridge-add");
 $addButton.addEventListener("click", createIngredient);
 
 function createIngredient() {
@@ -8,14 +9,15 @@ function createIngredient() {
   axios
     .post("/fridge/add", { ingredientName: $input.value })
     .then(response => {
-      console.log("THis is the new ingredient:", response)
+      console.log("This is the new ingredient:", response)
       let $newIngredient = document.createElement("span");
       $newIngredient.className = "ingredient";
       $newIngredient.innerHTML = `
-      <li>${response.data.name}</li>
+      <li class="ingredient-name">${response.data.name}</li>
       <button id="btn-delete" class="btn btn-danger">Remove</button>`;
       $list.appendChild($newIngredient);
       $input.value = "";
+
       let $deleteButton = $newIngredient.querySelector("#btn-delete");
       $deleteButton.addEventListener("click", deleteIngredient);
     })
@@ -24,8 +26,21 @@ function createIngredient() {
     });
 }
 
+// DELETE INGREDIENT
+const $deleteButtons = $list.querySelectorAll("#btn-delete");
+for (i=0; i < $deleteButtons.length; i++){
+  $deleteButtons[i].addEventListener("click", deleteIngredient);
+}
+
 function deleteIngredient(event) {
-  const deletepushedButton = event.target;
-  const ingredientToRemove = deletepushedButton.closest(".ingredient");
-  $list.removeChild(ingredientToRemove);
+  const $pushedButton = event.target;
+  const $ingredientToDelete = $pushedButton.closest('.ingredient').querySelector('.ingredient-name');
+  const ingredientName = $ingredientToDelete.innerHTML
+
+  axios
+    .post("/fridge/delete", {ingredientName: ingredientName})
+    .then((response) => {
+      const $spanToRemove = $pushedButton.closest(".ingredient");
+      $list.removeChild($spanToRemove);
+    })
 }
