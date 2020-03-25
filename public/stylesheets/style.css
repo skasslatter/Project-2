@@ -26,33 +26,32 @@ a {
     display: flex;
     justify-content: center;
   }
-
-.overview-features {
+  
+  .overview-features {
     height: 30vh;
-}
-
-#features-title {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 25px;
-}
-
-#features {
-  display: flex;
-  justify-content: space-around;
-  margin: 40px 0;
-}
-
-#feature-1, #feature-2, #feature-3 {
-  width: 30%;
-  display: flex;
-  justify-content: center;
-}
-
-#get-started {
-  display: flex;
-  justify-content: center;
-}
-
+  }
+  
+  #features-title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 25px;
+  }
+  
+  #features {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+  }
+  
+  #feature-1, #feature-2, #feature-3 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #get-started {
+    display: flex;
+    justify-content: center;
+  }
 /*# sourceMappingURL=style.css.map */
