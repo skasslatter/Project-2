@@ -1,13 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const User = require("./User.js");
 
 const recipeSchema = new Schema({
     title: String,
-    ingredients: [String],
-    // dishType: {
-    //   type: String, 
-    //   enum: ["Breakfast", "Dish", "Snack", "Drink", "Dessert", "Other"]},
+    ingredients: [{
+      type : mongoose.Schema.ObjectId,
+      ref : 'ingredients'
+    }],
     duration: {
       type: Number,
       min: 0
@@ -19,7 +18,7 @@ const recipeSchema = new Schema({
     },
     creator: {
       type: mongoose.Types.ObjectId,
-      ref: "User",
+      ref: "users",
     },
     imgName: String,
     imgPath: String,

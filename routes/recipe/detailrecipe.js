@@ -5,6 +5,7 @@ const Recipe = require("../../models/Recipe.js");
 app.get("/:id", (req, res) => {
   Recipe
   .findById(req.params.id)
+  .populate("ingredients")
     .then(recipe => {
       console.log("the response is", recipe);
       res.render("recipes/detail", {recipe: recipe, currentUser: req.session.currentUser});
