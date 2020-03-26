@@ -34,6 +34,39 @@ app.get("/:id", (req, res) => {
     });
 });
 
+app.post('/favourites', (req, res)=> {
+  const favouriteRecipe = req.body.favouriteRecipe
+  console.log(favouriteRecipe)
+    User
+  .findOneAndUpdate(  
+    { _id: req.session.currentUser._id },
+    { $push: { favouriteRecipes: favouriteRecipe} }
+    )
+    .then((favouriteRecipe) =>{
+      res.send({favouriteRecipes: favouriteRecipe})
+    })
+   .catch(err => {
+      console.log("this is an error", err);
+      res.send("error", err);
+    });
+})
+
+app.post('/delete', (req, res)=> {
+  const recipeId = req.body.recipeId
+  User
+  .findOneAndUpdate(
+    { _id: req.session.currentUser._id },
+    { $pull: { favouriteRecipes: recipeId} }
+  )
+  .then(() => {
+    res.sendStatus(204);
+  })
+  .catch(err => {
+    console.log("this is an error", err);
+    res.send("error", err);
+  });
+})
+
 module.exports = app;
 
 

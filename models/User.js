@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Ingredient = require("./Ingredient.js");
 
+
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -18,6 +19,12 @@ const userSchema = new mongoose.Schema({
     {
       type : mongoose.Schema.ObjectId,
       ref : 'ingredients'
+    }
+  ],
+  favouriteRecipes: [
+    {
+      type : mongoose.Schema.ObjectId,
+      ref : 'recipes'
     }
   ]
 })

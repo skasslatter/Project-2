@@ -7,10 +7,12 @@ app.get("/", (req, res) => {
   console.log("session:", req.session);
   User.findById(req.session.currentUser._id)
     .populate("fridgeIngredients")
+    .populate("favouriteRecipes")
     .then(user => {
       res.render("user/fridge", {
         ingredients: user.fridgeIngredients,
-        currentUser: req.session.currentUser
+        currentUser: req.session.currentUser,
+        favouriteRecipes: user.favouriteRecipes
       });
     });
 });
