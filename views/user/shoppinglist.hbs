@@ -1,13 +1,7 @@
-{{!-- <div class="hero-image">
-  <div class="hero-text">
-   <h2>Shopping list</h2>
-  </div>
-</div>  --}}
-
 <h2>Shopping list</h2>
 <ul id="shoppinglist">
-  {{#each recipe.ingredients}}
-  <li>{{this}}</li>
+  {{#each ingredients}}
+  <li>{{this.name}}</li>
   {{/each}}
 </ul>
 
