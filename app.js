@@ -73,7 +73,7 @@ function protect(req,res,next){
 app.use('/', require('./routes/index'));
 app.use('/signup', require('./routes/signup'));
 app.use('/login', require('./routes/login'));
-app.use('/logout', require('./routes/login'));
+app.use('/logout', require('./routes/logout'));
 
 
 app.use('/fridge', protect);
@@ -83,7 +83,8 @@ app.use('/newrecipe', protect);
 app.use('/newrecipe', require('./routes/recipe/newrecipe'));
 
 app.use('/recipes', require('./routes/recipe/recipes')); //list
-app.use('/recipes', require('./routes/recipe/detailrecipe')); //detail
+app.use('/recipes/detail', protect);
+app.use('/recipes/detail', require('./routes/recipe/detailrecipe')); //detail
 app.use('/recipes', require('./routes/recipe/updaterecipe')); //update
 app.use('/recipes', require('./routes/recipe/deleterecipe')); //delete
 

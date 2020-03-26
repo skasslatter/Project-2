@@ -9,7 +9,7 @@ function deleteRecipe(event) {
   const $recipeId = $pushedButton.closest('#favourite-recipe').querySelector("#recipeId")
 
   axios
-    .post("/recipes/delete", {recipeId: $recipeId.innerHTML})
+    .post("/recipes/detail/delete", {recipeId: $recipeId.innerHTML})
     .then((response) => {
       $recipeToDelete = $pushedButton.closest("#favourite-recipe")
       $recipeList.removeChild($recipeToDelete);

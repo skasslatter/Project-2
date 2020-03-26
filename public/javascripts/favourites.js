@@ -4,7 +4,7 @@ $addFavourite.addEventListener("click", addToFavourites)
 
 function addToFavourites(){
   let $recipeId = document.getElementById("recipeId");
-  axios.post("/recipes/favourites", {favouriteRecipe: $recipeId.innerHTML})
+  axios.post("/recipes/detail/favourites", {favouriteRecipe: $recipeId.innerHTML})
   .then((favouriteRecipe) => {
   
     console.log("recipe is deleted from favourites: ", favouriteRecipe)
