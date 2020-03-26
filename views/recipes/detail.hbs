@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <div class="card mb-3">
       <img src="{{recipe.imgPath}}" class="card-img-top" alt="Recipe">
-      <div class="card-body">
+      <div class="card-body" id="recipe">
         <h5 class="card-title">{{recipe.title}}</h5>
         <ul>
           <li>duration: {{recipe.duration}}</li>
@@ -32,6 +32,7 @@
 
         <div class="row justify-content-around">
           <a href="/shoppinglist/{{recipe.id}}" class="btn btn-success col-md-5 ">I want to make this recipe!</a>
+          <a href="javascript:window.print()" class="btn btn-success col-md-5">Download recipe</a>
           {{!-- <a href="/recipes/{{recipe.id}}/update" class="btn btn-warning col-md-5 ">Update recipe</a> --}}
           {{!-- <a href="/recipes/{{recipe.id}}/delete" class="btn btn-danger col-md-5">Delete recipe</a> --}}
           {{!-- change href --}}
