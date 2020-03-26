@@ -15,11 +15,8 @@ app.use(express.static("public"))
 
 const MongoClient = require('mongodb').MongoClient;
 
-const mongoUsername = process.env.MONGOUSERNAME
-const mongoPassword = process.env.MONGOPASSWORD
-
 mongoose
-  .connect(`mongodb+srv://${mongoUsername}:${mongoPassword}@cluster0-pfy4a.mongodb.net/Project2`, {useNewUrlParser: true})
+  .connect(`${process.env.DB}`, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
