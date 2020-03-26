@@ -10,22 +10,27 @@
               <h3 class="login-heading mb-4">Welcome!</h3>
 
               <form action="/signup" method="POST">
-               <div class="form-label-group">
-                  <input type="text" name="name" class="form-control" placeholder="Name" required>
+              
+                <div class="form-group">
+                <label for="name">Name</label>
+                  <input type="text" name="name" class="form-control" required>
                 </div>
 
-                <div class="form-label-group">
-                  <input type="text" name="username" class="form-control" placeholder="Username" required>
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" class="form-control" required>
                 </div>
 
-                <div class="form-label-group">
-                  <input type="password" name="password" class="form-control" placeholder="Password" required>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" class="form-control" required>
                 </div>
 
-                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign up</button>
+                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                  type="submit">Sign up</button>
                 <div class="text-center">
-                   Already have an account? <a class="small" href="/login">Log in</a>
-                  </div>
+                  Already have an account? <a class="small" href="/login">Log in</a>
+                </div>
               </form>
             </div>
           </div>
@@ -36,11 +41,11 @@
 </div>
 
 <div id="pswd_info">
-    <h4>Password must meet the following requirements:</h4>
-    <ul>
-        <li id="letter" class="invalid">At least <strong>one letter</strong></li>
-        <li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
-        <li id="number" class="invalid">At least <strong>one number</strong></li>
-        <li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
-    </ul>
+  <h4>Password must meet the following requirements:</h4>
+  <ul>
+    <li id="letter" class="invalid">At least <strong>one letter</strong></li>
+    <li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
+    <li id="number" class="invalid">At least <strong>one number</strong></li>
+    <li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
+  </ul>
 </div>
