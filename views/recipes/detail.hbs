@@ -7,11 +7,25 @@
         <ul>
           <li>duration: {{recipe.duration}}</li>
         </ul>
-        <ul>
-          {{#each recipe.ingredients}}
-          <li>{{this.name}}</li>
-          {{/each}}
-        </ul>
+
+        <div>
+          <h6>Available ingredients</h6>
+          <ul>
+            {{#each availableIngredients}}
+            <li>{{this.name}}</li>
+            {{/each}}
+          </ul>
+        </div>
+
+        <div>
+          <h6>Missing ingredients</h6>
+          <ul>
+            {{#each missingIngredients}}
+            <li>{{this.name}}</li>
+            {{/each}}
+          </ul>
+        </div>
+
         <p>{{recipe.description}}</p>
       </div>
       <div class="card-body">
@@ -27,4 +41,3 @@
   </div>
 </div>
 
-{{!-- change href and variable name (now recipe) --}}

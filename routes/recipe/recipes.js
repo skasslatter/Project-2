@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
   Recipe
     .find()
     .then(recipes => {
-      res.render("recipes/list.hbs", { recipes: recipes, currentUser: req.session.currentUser });
+      res.render("recipes/list.hbs", {recipes: recipes, currentUser: req.session.currentUser });
     })
     .catch(err => {
       res.render("error", err);
@@ -57,7 +57,7 @@ app.get('/results', (req, res) => {
         )
         .then((recipes)=> {
           console.log(recipes)
-          res.render("recipes/list.hbs", { recipes: recipes, currentUser: req.session.currentUser });
+          res.render("recipes/results.hbs", { recipes: recipes, currentUser: req.session.currentUser });
         })
         .catch(err => {
           console.log(err)
