@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="card mb-3">
-      <img src="{{recipe.imgPath}}" class="card-img-top" alt="Recipe">
+      <img src="{{recipe.imgPath}}" class="card-img-top detail" alt="Recipe">
       <div class="card-body" id="recipe">
-        <h5 class="card-title">{{recipe.title}}</h5>
+        <h5 class="card-title detail-title">{{recipe.title}}</h5>
         <ul>
-          <li>duration: {{recipe.duration}}</li>
+          <li>duration: {{recipe.duration}} min.</li>
         </ul>
 
         <div>
@@ -32,7 +32,7 @@
       </div>
       <div class="card-body">
 
-        <div class="row justify-content-around">
+        <div class="row justify-content-around flex-column d-flex align-items-center">
           <a href="/shoppinglist/{{recipe.id}}" class="btn btn-success col-md-3 ">I want to make this recipe!</a>
           <a href="javascript:window.print()" class="btn btn-success col-md-3">Download recipe</a>
           <a href="/fridge" id="favourite" class="btn btn-success col-md-3">Add to favourites</a>

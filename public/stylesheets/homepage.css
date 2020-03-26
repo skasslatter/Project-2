@@ -35,6 +35,7 @@
 {
   margin-top: 10%;
 }
+
 .how-img 
 {
   text-align: center;
@@ -49,5 +50,16 @@
   padding-bottom: 10px;
 }
 
+.overview-features h4 {
+  font-family: 'Liu Jian Mao Cao';
+  padding-top: 10px;
+  color:rgb(26, 92, 140);
+
+}
+
+.overview-features h5{
+  color:rgb(26, 92, 140);
+  font-style: italic;
+}
 
 
