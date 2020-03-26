@@ -17,17 +17,16 @@ app.post("/", uploadCloud.single('photo'), (req, res) => {
   Recipe
   .create({
     title: req.body.title,
-    dishType: req.body.dishType,
     duration: req.body.duration,
-    ingredients: req.body.ingredients,
+    // ingredients: req.body.ingredients,
     imgPath: req.file.url,
     imgName: req.file.originalname,
   })
     .then(recipe => {
       res.redirect(`/recipes/${recipe.id}`);
     })
-    .catch(error => {
-      res.send("error", error);
+    .catch(err => {
+      res.send("error", err);
     });
 });
 
