@@ -2,12 +2,14 @@
 @import "shoppinglist.css";
 @import url(footer.css);
 @import url(navbar.css);
+@import url(homepage.css);
 
 @import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   height: 100%!important;
   flex-direction: column!important;
   display: flex!important;
@@ -78,4 +80,43 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+.how-section1{
+  margin-top:-15%;
+  padding: 10%;
+}
+.how-section1 h4{
+  color: #ffa500;
+  font-weight: bold;
+  font-size: 30px;
+}
+.how-section1 .subheading{
+  color: rgb(7, 49, 79);
+  font-size: 20px;
+}
+.how-section1 .row
+{
+  margin-top: 10%;
+}
+.how-img 
+{
+  text-align: center;
+}
+.how-img img{
+  width: 40%;
+}
+
+.overview-features h4 {
+  font-family: 'Liu Jian Mao Cao';
+  padding-top: 10px;
+}
+
+.overview-features h5{
+  color: rgb(7, 49, 79);
+  font-style: italic;
+}
+
+.btn-success{
+  background-color: rgb(7, 49, 79)!important;
 }
