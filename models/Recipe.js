@@ -8,7 +8,7 @@ const recipeSchema = new Schema({
       ref : 'ingredients'
     }],
     duration: {
-      type: Number,
+      type: Numgber,
       min: 0
     },
     description: String,

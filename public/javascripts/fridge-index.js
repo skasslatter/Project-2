@@ -6,14 +6,17 @@ $addButton.addEventListener("click", createIngredient);
 
 function createIngredient() {
   let $input = document.getElementById("ingredient-input");
-  axios
+  let sanitizedInput = $input.value.replace(/\s/g,'');
+  if (!(document.getElementById(`${sanitizedInput}`))){
+    axios
     .post("/fridge/add", { ingredientName: $input.value })
     .then(response => {
       console.log("This is the new ingredient:", response)
       let $newIngredient = document.createElement("span");
       $newIngredient.className = "ingredient";
+      idName = response.data.name.replace(/\s/g,'');
       $newIngredient.innerHTML = `
-      <li class="ingredient-name">${response.data.name}</li>
+      <li class="ingredient-name" id="${idName}">${response.data.name}</li>
       <button id="btn-delete" class="btn btn-danger">Remove</button>`;
       $list.appendChild($newIngredient);
       $input.value = "";
@@ -24,6 +27,7 @@ function createIngredient() {
     .catch(err => {
       console.log("Error: ", err);
     });
+  }
 }
 
 // DELETE INGREDIENT

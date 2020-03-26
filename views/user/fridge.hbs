@@ -11,7 +11,7 @@
   <ul id="ingredient-list">
   {{#each ingredients}}
           <span class="ingredient">
-          <li class="ingredient-name">{{name}}</li>
+          <li class="ingredient-name" id="{{name}}">{{name}}</li>
           <button id="btn-delete" class="btn btn-danger">Remove</button>
           </span>
   {{/each}}
