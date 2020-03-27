@@ -1,4 +1,12 @@
-<h2 class="d-flex justify-content-center">Fridge of {{currentUser.name}}</h2>
+
+<div class="hero-fridge">
+  {{!-- <h1 id="main-title" class="hero-text">Buy some Thyme</h1> --}}
+  <h2 class="d-flex justify-content-center hero-text">Fridge of {{currentUser.name}}</h2>
+
+  {{!-- <img src="https://source.unsplash.com/4J059aGa5s4/2000x600"> --}}
+</div>
+
+{{!-- <h2 class="d-flex justify-content-center hero-text">Fridge of {{currentUser.name}}</h2> --}}
 
 <div class="container" id="fridge">
   <div class="column">
@@ -23,12 +31,12 @@
 
 <div class="button-group">
 <a id="inspiration-button" href="/recipes/results" class="btn btn-warning">Find inspiration</a>
-<a id="create-button" href="/newrecipe" class="btn btn-warning">Create your own recipe</a>
+{{!-- <a id="create-button" href="/newrecipe" class="btn btn-warning">Create your own recipe</a> --}}
 </div>
 
 
 <div class="container favourite-recipes-list">
-  <h3 id="favourite-title">All of your favourite recipes!</h3>
+  <h3 id="favourite-title">All of your favourite recipes:</h3>
   <div id="favorites-list" class="row row-cols-1 row-cols-md-2">
     {{#each favouriteRecipes}}
     <div id="favourite-recipe" class="col mb-4">

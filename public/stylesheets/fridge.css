@@ -39,6 +39,10 @@
   display: flex;
   justify-content: center;
   margin-bottom: 3%;
+  font-family: 'Liu Jian Mao Cao';
+  font-size: xx-large;
+  color: rgb(26, 92, 140);
+  font-weight: bold;
 }
 
 #inspiration-button, #create-button {
@@ -47,4 +51,19 @@
 
 .favourite-recipes-list {
   min-height: 20vh;
+}
+
+.hero-fridge {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/jason-briscoe-GliaHAJ3_5A-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+}
+
+.btn-danger{
+  padding: 0px 5px;
+  background-color: rgb(145, 33, 44);
+  font-size: 0.75rem
 }

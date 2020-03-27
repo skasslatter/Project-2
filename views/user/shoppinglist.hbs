@@ -8,7 +8,8 @@
      <div class="col-6 d-flex justify-content-center ">
       <img src="/images/calum-lewis-vA1L1jRTM70-unsplash.jpg" class="rounded-circle img-fluid" alt="">
     </div>
-    <div class="col-6 d-flex justify-content-center d-flex align-items-center">
+    <div class="col-6 d-flex justify-content-center d-flex align-items-center flex-column">
+      <h3>I still need to buy:</h3>
       <ul id="shoppinglist">
         {{#each ingredients}}
         <li>{{this.name}}</li>
@@ -19,7 +20,8 @@
   </div>
   <div class="row">
     <div class="col-12  d-flex justify-content-center">
-      <a id="download_link" href="javascript:window.print();" class="btn btn-success">Download shopping list!</a>
+      <a id="download_link" href="javascript:window.print();" class="btn btn-success btn-download ">Download shopping list!</a>
     </div>
   </div>
 </div>
+

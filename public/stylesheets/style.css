@@ -27,7 +27,13 @@ a {
 
 /*# sourceMappingURL=style.css.map */
 
-.btn-success {
+.btn-warning {
+  /* background-color: rgb(7, 49, 79) !important; */
+  /* border-color: rgb(7, 49, 79) !important; */
+  margin-bottom: 10px;
+}
+
+.btn-download {
   background-color: rgb(7, 49, 79) !important;
   border-color: rgb(7, 49, 79) !important;
   margin-bottom: 10px;
@@ -36,5 +42,9 @@ a {
 h2{
   font-family: 'Caveat';
   font-size: 4rem;
+  color: rgb(26, 92, 140);
+}
+
+h3{
   color: rgb(26, 92, 140);
 }
