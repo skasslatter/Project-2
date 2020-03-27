@@ -1,5 +1,19 @@
+#features-title {
+  justify-content: center;
+  margin: 25px;
+}
+
+#features {
+  margin: 40px 0;
+}
+
+#get-started {
+  display: flex;
+  justify-content: center;
+}
+
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../images/brooke-lark-M4E7X3z80PQ-unsplash.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/brooke-lark-M4E7X3z80PQ-unsplash.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,48 +32,30 @@
   color: white;
 }
 
-.how-section1{
-  margin-top:-15%;
-  padding: 10%;
-}
-.how-section1 h4{
-  color: #ffa500;
-  font-weight: bold;
-  font-size: 30px;
-}
-.how-section1 .subheading{
-  color: rgb(7, 49, 79);
-  font-size: 20px;
-}
-.how-section1 .row
-{
-  margin-top: 10%;
-}
-
-.how-img 
-{
+.how-img {
   text-align: center;
-
 }
-.how-img img{
+
+.how-img img {
   width: 40%;
   padding-bottom: 10px;
 }
 
-.feature{
+.feature {
   padding-bottom: 10px;
+}
+
+#feature-header{
+  font-size: 1.5rem;
 }
 
 .overview-features h4 {
   font-family: 'Liu Jian Mao Cao';
   padding-top: 10px;
-  color:rgb(26, 92, 140);
-
+  color: rgb(26, 92, 140);
 }
 
-.overview-features h5{
-  color:rgb(26, 92, 140);
+.overview-features h5 {
+  color: rgb(26, 92, 140);
   font-style: italic;
 }
-
-
