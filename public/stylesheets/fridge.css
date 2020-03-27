@@ -43,6 +43,8 @@
   font-size: xx-large;
   color: rgb(26, 92, 140);
   font-weight: bold;
+  padding-top: 20px;
+  border-top: solid 2px rgba(26, 92, 140, 0.5);
 }
 
 #inspiration-button, #create-button {
@@ -64,6 +66,8 @@
 
 .btn-danger{
   padding: 0px 5px;
-  background-color: rgb(145, 33, 44);
+  background-color: chocolate;
+  border-color: chocolate;
   font-size: 0.75rem
 }
+

@@ -23,3 +23,12 @@ h6 {
 #card-description{
   margin-top: 30px;
 }
+
+#duration{
+  color: rgb(26, 92, 140);
+  font-weight: bold;
+}
+
+#avail-ingredients {
+  min-height: 10vh;
+}

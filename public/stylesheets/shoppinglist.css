@@ -7,3 +7,7 @@
 h2 {
   margin-top: 2vh;
 }
+
+#download_link{
+  font-family: 'Roboto Mono', monospace;
+}

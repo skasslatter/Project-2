@@ -6,12 +6,12 @@
         <h5 class="card-title detail-title text-center">{{recipe.title}}</h5>
 
         <div class="container ">
-          <div class="row text-center">
+          <div class="row">
             <div class="col-6">
               <img src="{{recipe.imgPath}}" class="card-img-top detail" alt="Recipe">
             </div>
             <div class="col-6 d-flex align-items-center flex-column justify-content-center">
-              <div>
+              <div id="avail-ingredients">
                 <h6>Available ingredients</h6>
                 <ul>
                   {{#each availableIngredients}}
@@ -28,10 +28,8 @@
                 </ul>
               </div>
               <div>
-                <h6>Duration</h6>
-                <ul>
-                  <li>{{recipe.duration}} min.</li>
-                </ul>
+                {{!-- <h6>Duration</h6> --}}
+                  <p><span id="duration">Duration:</span> {{recipe.duration}} minutes</p>
               </div>
             </div>
           </div>
