@@ -1,8 +1,13 @@
 @import url(login.css);
-@import "shoppinglist.css";
+@import url(signup.css);
 @import url(footer.css);
 @import url(navbar.css);
 @import url(homepage.css);
+@import url(fridge.css);
+@import url(shoppinglist.css);
+@import url(recipedetail.css);
+
+
 
 @import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
@@ -42,27 +47,6 @@ a {
   background-color: rgb(7, 49, 79) !important;
   border-color: rgb(7, 49, 79) !important;
   margin-bottom: 10px;
-}
-
-.card-body h5,
-h6 {
-  color: rgb(26, 92, 140);
-  font-weight: bold;
-}
-
-.detail {
-  width: 100%;
-  height: 50vw;
-    object-fit: cover;
-}
-
-.card-title {
-  font-family: 'Caveat';
-  font-size: 1.5rem;
-}
-
-.detail-title{
-  font-size: 2.5rem;
 }
 
 h2{
