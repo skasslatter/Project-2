@@ -1,32 +1,43 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="card mb-3">
-      <img src="{{recipe.imgPath}}" class="card-img-top detail" alt="Recipe">
+
       <div class="card-body" id="recipe">
-        <h5 class="card-title detail-title">{{recipe.title}}</h5>
-        <ul>
-          <li>duration: {{recipe.duration}} min.</li>
-        </ul>
+        <h5 class="card-title detail-title text-center">{{recipe.title}}</h5>
 
-        <div>
-          <h6>Available ingredients</h6>
-          <ul>
-            {{#each availableIngredients}}
-            <li>{{this.name}}</li>
-            {{/each}}
-          </ul>
+        <div class="container ">
+          <div class="row text-center">
+            <div class="col-6">
+              <img src="{{recipe.imgPath}}" class="card-img-top detail" alt="Recipe">
+            </div>
+            <div class="col-6 d-flex align-items-center flex-column justify-content-center">
+              <div>
+                <h6>Available ingredients</h6>
+                <ul>
+                  {{#each availableIngredients}}
+                  <li>{{this.name}}</li>
+                  {{/each}}
+                </ul>
+              </div>
+              <div>
+                <h6>Missing ingredients</h6>
+                <ul>
+                  {{#each missingIngredients}}
+                  <li>{{this.name}}</li>
+                  {{/each}}
+                </ul>
+              </div>
+              <div>
+                <h6>Duration</h6>
+                <ul>
+                  <li>{{recipe.duration}} min.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <h6>Missing ingredients</h6>
-          <ul>
-            {{#each missingIngredients}}
-            <li>{{this.name}}</li>
-            {{/each}}
-          </ul>
-        </div>
-
-        <p>{{recipe.description}}</p>
+        <p id="card-description">{{recipe.description}}</p>
 
         <p id="recipeId" hidden>{{recipe.id}}</p>
       </div>
@@ -41,7 +52,8 @@
           {{!-- change href --}}
         </div>
       </div>
+
+
     </div>
   </div>
 </div>
-
