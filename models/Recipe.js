@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const recipeSchema = new Schema({
     title: String,
     ingredients: [{
-      type : mongoose.Types.ObjectId,
+      type : mongoose.Schema.ObjectId,
       ref : 'ingredients'
     }],
     duration: {

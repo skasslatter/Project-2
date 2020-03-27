@@ -1,13 +1,14 @@
 <h2 class="d-flex justify-content-center">Fridge of {{currentUser.name}}</h2>
 
-<div>
-  <p>Add ingredients to your fridge:</p>
+<div class="container" id="fridge">
+  <div class="column">
+  <h3 id="column-title">Add ingredients to your fridge:</h3>
   <input id="ingredient-input" type="text" placeholder="Search.." name="search">
   <button id="fridge-add" class="btn btn-warning">Add</button>
 </div>
 
-<div>
-  <h3>Ingredients I have at home:</h3>
+<div class="column"> 
+  <h3 id="column-title">Ingredients I have at home:</h3>
   <ul id="ingredient-list">
   {{#each ingredients}}
           <span class="ingredient">
@@ -17,15 +18,17 @@
   {{/each}}
   </ul>
 </div>
-
-<div>
-<a href="/recipes/results" class="btn btn-warning">Find inspiration</a>
-<a href="/newrecipe" class="btn btn-warning">Create your own recipe</a>
 </div>
 
 
-<div class="container">
-  <h3>All of your favourite recipes!</h3>
+<div class="button-group">
+<a id="inspiration-button" href="/recipes/results" class="btn btn-warning">Find inspiration</a>
+<a id="create-button" href="/newrecipe" class="btn btn-warning">Create your own recipe</a>
+</div>
+
+
+<div class="container favourite-recipes-list">
+  <h3 id="favourite-title">All of your favourite recipes!</h3>
   <div id="favorites-list" class="row row-cols-1 row-cols-md-2">
     {{#each favouriteRecipes}}
     <div id="favourite-recipe" class="col mb-4">

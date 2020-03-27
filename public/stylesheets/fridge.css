@@ -1,0 +1,50 @@
+#fridge {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3%;
+  min-height: 37vh;
+}
+
+
+#column-title {
+  margin-bottom: 5%;
+}
+
+#ingredient-list {
+  width: 60%;
+}
+
+.ingredient {
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+  align-items: center;
+}
+
+.ingredient-name {
+  font-size: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+#favourite-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+}
+
+#inspiration-button, #create-button {
+  margin: 0 3%;
+}
+
+.favourite-recipes-list {
+  min-height: 20vh;
+}
