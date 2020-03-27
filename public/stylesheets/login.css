@@ -3,6 +3,10 @@
   --input-padding-y: 0.75rem;
 }
 
+#log-in {
+  margin-top: 10%;
+}
+
 .login,
 .image {
   min-height: 100vh;
