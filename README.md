@@ -13,7 +13,7 @@ You can check the application here: https://buy-some-thyme.herokuapp.com/
 
 <b>Created by:</b> Yvana Wagter and Sybille Kasslatter - two students of Ironhack Bootcamp in Amsterdam in April 2020.
 
-![alt text](https://res.cloudinary.com/dwnm4mxrr/image/upload/v1589892901/screenshots/thyme1_b5uhiq.png)
-![alt text](https://res.cloudinary.com/dwnm4mxrr/image/upload/v1589892901/screenshots/thyme3_m4aclk.png)
-![alt text](https://res.cloudinary.com/dwnm4mxrr/image/upload/v1589892901/screenshots/thyme2_fyhdpi.png)
-![alt text](https://res.cloudinary.com/dwnm4mxrr/image/upload/v1589892782/screenshots/thyme4_jrle1w.png)
+![alt text](https://res.cloudinary.com/dwnm4mxrr/image/upload/v1589892901/screenshots/ironhack/thyme1_b5uhiq.png)
+![alt text](https://res.cloudinary.com/dwnm4mxrr/image/upload/v1589892901/screenshots/ironhack/thyme3_m4aclk.png)
+![alt text](https://res.cloudinary.com/dwnm4mxrr/image/upload/v1589892901/screenshots/ironhack/thyme2_fyhdpi.png)
+![alt text](https://res.cloudinary.com/dwnm4mxrr/image/upload/v1589892782/screenshots/ironhack/thyme4_jrle1w.png)
